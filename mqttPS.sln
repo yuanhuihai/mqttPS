@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mqttPS", "mqttPS\mqttPS.csproj", "{B4941C7B-4EE7-42AA-ACF0-D0DF0B69BF8F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4941C7B-4EE7-42AA-ACF0-D0DF0B69BF8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4941C7B-4EE7-42AA-ACF0-D0DF0B69BF8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4941C7B-4EE7-42AA-ACF0-D0DF0B69BF8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4941C7B-4EE7-42AA-ACF0-D0DF0B69BF8F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7F423B20-4239-4F0C-96BB-8F4D85213CE2}
+	EndGlobalSection
+EndGlobal
