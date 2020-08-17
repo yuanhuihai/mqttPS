@@ -122,5 +122,57 @@ namespace mqttPS
             mqttClient.PublishAsync(appMsg);
 
         }
+
+        //窗口关闭时，程序后台运行
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            this.WindowState = FormWindowState.Minimized;
+        }
+        private void exitMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("你确定要退出程序吗？", "确认", MessageBoxButtons.OKCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.OK)
+            {
+                notifyIcon1.Visible = false;
+                this.Close();
+                this.Dispose();
+                Application.Exit();
+            }
+
+        }
+
+        private void hideMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void showMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Show();
+            this.WindowState = FormWindowState.Normal;
+            this.Activate();
+
+        }
+
+        //托盘
+        private void notifyIcon1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)//判断鼠标的按键
+            {
+                if (this.WindowState == FormWindowState.Normal)
+                {
+                    this.WindowState = FormWindowState.Minimized;
+
+                    this.Hide();
+                }
+                else if (this.WindowState == FormWindowState.Minimized)
+                {
+                    this.Show();
+                    this.WindowState = FormWindowState.Normal;
+                    this.Activate();
+                }
+            }
+
+        }
     }
 }
