@@ -109,13 +109,14 @@ namespace mqttPS
         private void button1_Click(object sender, EventArgs e)
         {
             timer2.Start();
+            button1.Enabled = false;
         }
 
         private void timer2_Tick(object sender, EventArgs e)
         {
             string topics = topic.Text.Trim();
 
-            timer2.Interval = 10000;
+            timer2.Interval = 5000;
 
             string inputString = "烟囱温度:" + "电泳一" + label19.Text + "---" + "电泳二" + label18.Text + "---" + "PVC" + label17.Text + "---" + "中涂一" + label16.Text + "---" + "中涂二" + label15.Text + "---" + "面漆一" + label14.Text + "---" + "面漆二" + label13.Text;
             var appMsg = new MqttApplicationMessage(topics, Encoding.UTF8.GetBytes(inputString), MqttQualityOfServiceLevel.AtMostOnce, false);
