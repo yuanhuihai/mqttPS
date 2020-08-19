@@ -88,6 +88,7 @@ namespace mqttPS
         private void Form1_Load(object sender, EventArgs e)
         {
             timer1.Start();
+            timer3.Start();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -174,6 +175,12 @@ namespace mqttPS
                 }
             }
 
+        }
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            timer3.Interval = 300000;
+            Task.Run(async () => { await ConnectMqttServerAsync(); });
         }
     }
 }
